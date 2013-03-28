@@ -1,5 +1,8 @@
 FPCollaboration::Application.routes.draw do
 
+  resources :scrapbooks
+
+
   devise_for :admins
 
   devise_for :collaborators
