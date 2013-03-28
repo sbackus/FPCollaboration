@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326173545) do
+ActiveRecord::Schema.define(:version => 20130328161848) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -105,6 +105,12 @@ ActiveRecord::Schema.define(:version => 20130326173545) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "pages", :force => true do |t|
+    t.integer  "scrapbook_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "question_groups", :force => true do |t|
     t.text     "text"
     t.text     "help_text"
@@ -181,6 +187,12 @@ ActiveRecord::Schema.define(:version => 20130326173545) do
 
   add_index "responses", ["api_id"], :name => "uq_responses_api_id", :unique => true
   add_index "responses", ["survey_section_id"], :name => "index_responses_on_survey_section_id"
+
+  create_table "scrapbooks", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "survey_sections", :force => true do |t|
     t.integer  "survey_id"
