@@ -10,11 +10,11 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              pages_path, :class => 'btn'  %>
+              scrapbook_pages_path(@scrapbook), :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_page_path(@page), :class => 'btn' %>
+              edit_scrapbook_page_path(@scrapbook, @page), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              page_path(@page),
+              scrapbook_page_path(@scrapbook, @page),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
