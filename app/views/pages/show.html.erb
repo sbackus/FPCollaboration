@@ -7,6 +7,9 @@
   <dt><strong><%= model_class.human_attribute_name(:scrapbook_id) %>:</strong></dt>
   <dd><%= @page.scrapbook_id %></dd>
 </dl>
+<div class="draggable simple-scrap">
+  <p>This is a scrap</p>
+</div>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
