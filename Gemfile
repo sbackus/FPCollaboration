@@ -28,6 +28,7 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem "acts_as_relation"
 
