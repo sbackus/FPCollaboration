@@ -7,8 +7,13 @@
   <dt><strong><%= model_class.human_attribute_name(:scrapbook_id) %>:</strong></dt>
   <dd><%= @page.scrapbook_id %></dd>
 </dl>
-<div class="draggable simple-scrap">
+
+<div class="ui-widget-content draggable simple-scrap ">
   <p>This is a scrap</p>
+</div>
+
+<div id="droppable" class="droppable ui-widget-header">
+  <p>Drop here</p>
 </div>
 
 <div class="form-actions">
