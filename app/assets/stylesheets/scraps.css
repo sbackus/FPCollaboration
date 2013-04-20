@@ -1,2 +1,4 @@
 .draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
 .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+.page{position:relative;}
+.background-button {width: 100px; margin: 10px 10px 10px 10px; float:left; cursor: pointer; cursor:hand;}
