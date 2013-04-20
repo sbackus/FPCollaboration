@@ -1,4 +1,56 @@
 <%= form_for @scrapbook, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <style>
+    .small-scrap { width: 150px; height: 150px; padding: 0.1em; }
+    .page {width: 300px; height: 300px; padding: 0.5em; border-style:solid; border-width:1px; float:left;}
+    #scrapbook-side-bar{
+    float: right;
+    height: 100%;
+    width: 200px;
+    margin-top: 100px;
+    }
+
+  </style>
+
+  <div id="scrapbook-side-bar">
+      <h3>Scraps</h3>
+  <div>
+    <ul>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "pinkheart.jpg" %>
+        </div>
+      </li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Backgrounds</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Borders</h3>
+  <div>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+  </div>
+
+  <div class="page ui-widget-header">
+        <div class="scrap small-scrap">
+          <%= image_tag "redheart.png" %>
+        </div>
+  </div>
+
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
@@ -7,7 +59,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'datepicker btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 scrapbooks_path, :class => 'btn' %>
   </div>
