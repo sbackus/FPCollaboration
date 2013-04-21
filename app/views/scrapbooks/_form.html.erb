@@ -62,4 +62,9 @@
 
   </div>
 
+<%= simple_form_for [@scrapbook] do |f| %>
+  <%= f.hidden_field :data_picture %>   
+  <%= f.button :submit %>
+<% end %>
+
 <% end %>
