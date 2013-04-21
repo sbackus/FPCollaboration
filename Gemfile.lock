@@ -104,6 +104,7 @@ GEM
     multi_json (1.7.2)
     mustache (0.99.4)
     orm_adapter (0.0.7)
+    pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -203,6 +204,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   less-rails
+  pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sqlite3
