@@ -2,12 +2,15 @@
 .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
 .background-button {width: 100px; margin: 10px 10px 10px 10px; float:left; cursor: pointer; cursor:hand;}
 .small-scrap { width: 150px; height: 150px; padding: 0.1em; }
-.page {position:relative; width: 400px; height: 500px; padding: 0.5em; border-style:solid; border-width:1px; float:left;}
+.page {background-color: white; position:relative; width: 500px; height: 500px; padding: 0.5em; margin: 10px 10px 10px 10px; border-style:solid; border-width:1px; float:left;}
 #scrapbook-side-bar{
-float: right;
+float: left;
 height: 100%;
 width: 200px;
 margin-top: 0px;
+}
+body{
+	background-color: pink;
 }
 
 .ui-accordion-content-active{

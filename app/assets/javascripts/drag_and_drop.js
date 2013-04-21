@@ -2,12 +2,6 @@
       $( ".scrap-options .scrap" ).draggable({ appendTo: ".page", helper: "clone", revert: "invalid",
         stop: function(event, ui){
           var scrap = ui.helper.clone();
-          // var pagetop = $(".page").position().top;
-          // var pageleft = $(".page").position().left;
-          // var scraptop = $(".ui-draggable-dragging").position().top;
-          // var scrapleft = $(".ui-draggable-dragging").position().left;
-          // alert("pagetop: " + pagetop+ " pageleft: "+pageleft+" scraptop: " + scraptop+ " scrapleft: "+scrapleft);
-          // scrap.css({"position":"absolute", "top":scraptop-pagetop+"px", "left": scrapleft-pageleft+"px"})
           scrap.appendTo(".page");
           $( ".page .scrap" ).draggable({ containment: "parent" });
         }
