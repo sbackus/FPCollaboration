@@ -12,6 +12,12 @@
       $(".background-button").click(function(){
         $(".page").css('background-image', 'url(' + $(this).find("img").attr("src")+ ')');
       })
+
+      
+      $('#new_scrapbook_page').click(function() {
+        var html = $('.page')[0].outerHTML;
+        $('#new_scrapbook_page_html').val(html);
+      });
     });
 
 

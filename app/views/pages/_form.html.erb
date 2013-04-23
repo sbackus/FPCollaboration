@@ -65,25 +65,15 @@
   <div class="control-group">
     <%= f.label :scrapbook_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.hidden_field :html, :class => 'number_field' %>
+      <%= f.hidden_field :html, :class => 'text_field', :id => 'new_scrapbook_page_html' %>
 
     </div>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn btn-primary' ,:id=> 'new_scrapbook_page' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 scrapbook_pages_path(@scrapbook), :class => 'btn' %>
   </div>
-
-      <script> 
-      $(function() {
-        var page = $(".page")
-        var html = page.html();
-        $('#new_picture_card').submit(function() {
-          $('#picture_card_data_picture').val(canvas.toDataURL());
-        });
-      });
-    </script>
 
 <% end %>

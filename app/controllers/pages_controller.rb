@@ -44,7 +44,8 @@ before_filter :authenticate_user!
   # POST /pages.json
   def create
     @page = @scrapbook.pages.new(params[:page])
-
+    @page.html = params[:page][:html]
+    puts("CREATE   CREATE   "+@page.html)
     respond_to do |format|
       if @page.save
         format.html { redirect_to [@scrapbook, @page], notice: 'Page was successfully created.' }
@@ -60,7 +61,7 @@ before_filter :authenticate_user!
   # PUT /pages/1.json
   def update
     @page = @scrapbook.pages.find(params[:id])
-
+    @page.html = params[:html]
     respond_to do |format|
       if @page.update_attributes(params[:page])
         format.html { redirect_to [@scrapbook, @page], notice: 'Page was successfully updated.' }
