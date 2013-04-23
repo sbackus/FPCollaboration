@@ -1,8 +1,72 @@
+
+  
+
+  <div id="scrapbook-side-bar">
+      <h3>Scraps</h3>
+  <div>
+    <ul>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "redheart.png" %>
+        </div>
+      </li>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "pink-backpack.png" %>
+        </div>
+      </li>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "bow.png" %>
+        </div>
+      </li>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "stamp.png" %>
+        </div>
+      </li>
+      <li class="scrap-options">
+        <div class="scrap small-scrap">
+          <%= image_tag "rainbows.png" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h3>Backgrounds</h3>
+  <div>
+    <div class="background-button">
+      <%= image_tag "Paper_texture_v5_by_bashcorpo.jpg" %>
+    </div>
+    <div class="background-button">
+      <%= image_tag "tropical-background.jpg" %>
+    </div>
+    <div class="background-button">
+      <%= image_tag "Background_stamps.jpg" %>
+    </div>
+    <div class="background-button">
+      <%= image_tag "Paper_texture_1_by_wojtar_stock.jpg" %>
+    </div>
+  </div>
+  <h3>Borders</h3>
+  <div>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+  </div>
+
+  <div class="page">
+
+  </div>
 <%= form_for([@scrapbook, @page], :html => { :class => 'form-horizontal' }) do |f| %>
   <div class="control-group">
     <%= f.label :scrapbook_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :scrapbook_id, :class => 'number_field' %>
+      <%= f.hidden_field :html, :class => 'number_field' %>
+
     </div>
   </div>
 
@@ -11,4 +75,15 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 scrapbook_pages_path(@scrapbook), :class => 'btn' %>
   </div>
+
+      <script> 
+      $(function() {
+        var page = $(".page")
+        var html = page.html();
+        $('#new_picture_card').submit(function() {
+          $('#picture_card_data_picture').val(canvas.toDataURL());
+        });
+      });
+    </script>
+
 <% end %>
