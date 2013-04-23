@@ -42,10 +42,11 @@ class ScrapbooksController < ApplicationController
   # POST /scrapbooks.json
   def create
     @scrapbook = Scrapbook.new(params[:scrapbook])
+    @page = @scrapbook.pages.new
 
     respond_to do |format|
       if @scrapbook.save
-        format.html { redirect_to @scrapbook, notice: 'Scrapbook was successfully created.' }
+        format.html { redirect_to new_scrapbook_page_url(@scrapbook), notice: 'Scrapbook was successfully created.' }
         format.json { render json: @scrapbook, status: :created, location: @scrapbook }
       else
         format.html { render action: "new" }

@@ -8,14 +8,6 @@
   <dd><%= @page.scrapbook_id %></dd>
 </dl>
 
-<div class="ui-widget-content draggable simple-scrap ">
-  <p>This is a scrap</p>
-</div>
-
-<div id="droppable" class="droppable ui-widget-header">
-  <p>Drop here</p>
-</div>
-
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               scrapbook_pages_path(@scrapbook), :class => 'btn'  %>
