@@ -1,5 +1,6 @@
 FPCollaboration::Application.routes.draw do
-
+  root :to => "scrapbooks#new"
+  
   resources :scrapbooks do
     resources :pages
   end
@@ -11,7 +12,7 @@ FPCollaboration::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "home#index"
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

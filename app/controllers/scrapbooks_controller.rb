@@ -1,4 +1,5 @@
 class ScrapbooksController < ApplicationController
+  before_filter :authenticate_user!
   # GET /scrapbooks
   # GET /scrapbooks.json
   def index
